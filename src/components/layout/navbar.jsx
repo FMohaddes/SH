@@ -1,7 +1,12 @@
-import React , { useContext } from 'react'
+import React , { useContext , useEffect , useState } from 'react'
 import styled , { ThemeContext } from "styled-components";
 import { Toggle } from "../toggle";
 import { Link as ReactRouterDomLink , useLocation } from 'react-router-dom';
+import { ReactComponent as User } from "../../assets/icons/user.svg";
+import { motion } from "framer-motion";
+import { PageAnimation } from "../../styles/animations/animations";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import LoginPopup from "../loginPopup";
 
 const Link = ( { isActive , children , ...props } ) => {
      return (
@@ -14,30 +19,49 @@ const Link = ( { isActive , children , ...props } ) => {
 function Navbar() {
      // const { id , setTheme } = useContext( ThemeContext );
      const { pathname } = useLocation();
+     const [ isOpen , setIsOpen ] = useState( false )
+     
+     function handleClick( event ) {
+          setIsOpen( !isOpen )
+          console.log( isOpen )
+     }
+     
+     function handleClickOutside() {
+          setIsOpen( false )
+     }
+     
+     //
+     // useEffect( () => {
+     //      document.addEventListener( "mousedown" , handleClickOutside )
+     //      return () => {
+     //           document.removeEventListener( "mousedown" , handleClickOutside )
+     //      }
+     // } , [] )
      
      return (
-          <$NavbarGrid >
-               <img src = { "/images/logo/logo.png" } alt = "" />
-               <$Menu >
-                    <StyledLink to = "/" isActive = { pathname === '/' } >
-                         Home
-                    </StyledLink >
-                    <StyledLink to = "/tours" isActive = { pathname === '/tours' } >
-                         TOURS
-                    </StyledLink >
-                    <StyledLink to = "/hotels" isActive = { pathname === '/hotels' } >
-                         HOTELS
-                    </StyledLink >
-                    <StyledLink to = "/contact" isActive = { pathname === '/contact' } >
-                         CONTACT
-                    </StyledLink >
-                    <StyledLink to = "/login" isActive = { pathname === '/login' } >
-                         Login
-                    </StyledLink >
-               </$Menu >
+          <motion.div variants = { PageAnimation } initial = "hidden" animate = "show" >
                
-               {/*<Toggle isActive = { id === 'dark' } onToggle = { setTheme } />*/ }
-          </$NavbarGrid >
+               <$NavbarGrid >
+                    <Logo />
+                    <$Menu >
+                         <StyledLink to = "/" isActive = { pathname === '/' } >
+                              Home
+                         </StyledLink >
+                         <StyledLink to = "/tours" isActive = { pathname === '/tours' } >
+                              TOURS
+                         </StyledLink >
+                         <StyledLink to = "/hotels" isActive = { pathname === '/hotels' } >
+                              HOTELS
+                         </StyledLink >
+                         <StyledLink to = "/contact" isActive = { pathname === '/contact' } >
+                              CONTACT
+                         </StyledLink >
+                         <$User onClick = { handleClick } />
+                         <LoginPopup isOpen = { isOpen } />
+                    </$Menu >
+                    {/*<Toggle isActive = { id === 'dark' } onToggle = { setTheme } />*/ }
+               </$NavbarGrid >
+          </motion.div >
      );
 }
 
@@ -51,11 +75,17 @@ const $NavbarGrid = styled.nav`
      background            : ${ p => p.theme.GREY_DARK_2 };
      align-content         : center;
      overflow              : hidden;
-     justify-content: center;
-     img {
-          grid-row    : 1/2;
-          grid-column : 2/3;
-          width       : 16%;
+     justify-content       : center;
+     @media only screen and (max-width : 50em) {
+          grid-template-columns :minmax(1rem, 3rem) 1fr 1fr minmax(1rem, 3rem);
+          }
+
+     > * {
+          :nth-child(1) {
+               width       : 7rem;
+               grid-row    : 1/2;
+               grid-column : 2/3;
+               }
           }
 `
 const $Menu = styled.div`
@@ -63,17 +93,23 @@ const $Menu = styled.div`
      grid-column     : 3/4;
      display         : flex;
      justify-content : space-between;
-
+     align-items     : center;
 `
 
 const StyledLink = styled( Link )`
      padding        : 4px 8px;
      display        : block;
-     font-size      : 1.6rem;
+     font-size      : 1.8rem;
      text-align     : center;
      box-sizing     : border-box;
      margin         : auto 0;
      font-weight    : ${ p => p.isActive ? '800' : '400' };
      color          : ${ p => p.isActive ? `${ p.theme.WHITE }` : `${ p.theme.GREY }` };
      text-transform : uppercase;
+`
+const $User = styled( User )`
+     width  : 4rem;
+     height : 3.2rem;
+     fill   : ${ p => p.theme.GREY_LIGHT };
+     cursor : pointer;
 `

@@ -1,13 +1,21 @@
 import React from 'react'
 import styled from "styled-components";
 import Header from "./components/header";
+import { PageAnimation } from "../../styles/animations/animations";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function HomePage() {
-  return (
-       <$HomePageGrid >
-       <Header/>
-       </$HomePageGrid >
-  );
+     return (
+          <motion.div variants = { PageAnimation } initial = "hidden" animate = "show" >
+               
+               <$HomePageGrid >
+                    <Header />
+                    <div>                    <Link to={"/ "}>salam</Link>
+                    </div>
+               </$HomePageGrid >
+          </motion.div >
+     );
 }
 
 export default HomePage;
@@ -21,4 +29,10 @@ export const $HomePageGrid = styled.div`
      grid-column-gap       : 1rem;
      overflow              : hidden;
      position              : relative;
+     >*{
+          :nth-child(2){
+               height: 200rem;
+               }
+          }
+    
 `

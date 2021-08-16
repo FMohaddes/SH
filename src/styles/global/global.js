@@ -11,16 +11,9 @@ export const GlobalStyles = createGlobalStyle`
           --fluid-typography-ratio : 0.6;
           --rem-lg                 : calc(var(--base-font-size) + var(--fluid-typography-ratio) * 1vw);
           --rem-md                 : calc(var(--base-font-size) + var(--fluid-typography-ratio) * 1.3vw);
-          --rem-sm                 : calc(var(--base-font-size) + var(--fluid-typography-ratio) * 1.7vw);
-          --rem-xsm                : calc(var(--base-font-size) + var(--fluid-typography-ratio) * 2vw);
+          --rem-sm                 : calc(var(--base-font-size) + var(--fluid-typography-ratio) * 1.5vw);
+          --rem-xsm                : calc(var(--base-font-size) + var(--fluid-typography-ratio) * 1.7vw);
 
-          //....................... < projects colors > .......................
-
-          --c-grey-light             : hsl(0, 0%, 97%);
-          --c-grey-light-2           : hsl(0, 0%, 90%);
-          --c-grey                   : hsl(0, 0%, 50%);
-          --c-grey-dark              : hsl(0, 0%, 35%);
-          --c-grey-dark-2            : hsl(0, 0%, 15%);
           }
 
      *,
@@ -42,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
                font-size : var(--rem-sm);
                }
 
-          @media only screen and (max-width : 37.5em) {
+          @media only screen and (max-width : 37em) {
                font-size : var(--rem-sm);
                }
 
@@ -67,8 +60,8 @@ export const GlobalStyles = createGlobalStyle`
           }
 
      ::selection {
-          background-color : #000;
-          color            : #F9F7F6;
+          background-color :  ${ p => p.theme.PRIMARY_DARK};
+          color            :${ p => p.theme.WHITE} ;
           }
 
 `
