@@ -11,8 +11,6 @@ function HomePage() {
                
                <$HomePageGrid >
                     <Header />
-                    <div>                    <Link to={"/ "}>salam</Link>
-                    </div>
                </$HomePageGrid >
           </motion.div >
      );

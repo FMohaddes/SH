@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from "styled-components";
 
-function FormInput( { name , type , placeholder ,Ref } ) {
-     console.log(Ref)
-     
+function FormInput( { name , type , placeholder ,Ref ,...other } ) {
      return (
           <>
-               <$Input ref={Ref} type = { type } placeholder = { placeholder } name = { name } />
+               <$Input ref={Ref} type = { type } placeholder = { placeholder }
+                    name = { name } {...other}/>
           </>
      
      );
@@ -17,12 +16,11 @@ export default FormInput;
 export const $Input = styled.input`
      font-family      : inherit;
      color            : inherit;
-     padding          : 1rem 2rem;
+     padding          : .5rem 2rem;
      background-color : ${p => p.theme.WHITE};
      border           : none;
-     border-radius    : 1.5rem;
-     width            : 100%;
-     height           : 5rem;
+     border-radius    : 1.4rem;
+     height           : 4.5rem;
      border-bottom    : 3px solid transparent;
      display          : block;
 

@@ -1,12 +1,12 @@
 import React , { useContext , useEffect , useState } from 'react'
 import styled , { ThemeContext } from "styled-components";
-import { Toggle } from "../toggle";
+import { Toggle } from "../dev/toggle";
 import { Link as ReactRouterDomLink , useLocation } from 'react-router-dom';
 import { ReactComponent as User } from "../../assets/icons/user.svg";
 import { motion } from "framer-motion";
 import { PageAnimation } from "../../styles/animations/animations";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-import LoginPopup from "../loginPopup";
+import AccountPopup from "../user/account-popup";
 
 const Link = ( { isActive , children , ...props } ) => {
      return (
@@ -23,7 +23,6 @@ function Navbar() {
      
      function handleClick( event ) {
           setIsOpen( !isOpen )
-          console.log( isOpen )
      }
      
      function handleClickOutside() {
@@ -56,8 +55,10 @@ function Navbar() {
                          <StyledLink to = "/contact" isActive = { pathname === '/contact' } >
                               CONTACT
                          </StyledLink >
-                         <$User onClick = { handleClick } />
-                         <LoginPopup isOpen = { isOpen } />
+                         <$IconWrapper onClick = { ( e ) => handleClick( e ) } >
+                              <$User />
+                         </$IconWrapper >
+                         <AccountPopup isOpen = { isOpen } />
                     </$Menu >
                     {/*<Toggle isActive = { id === 'dark' } onToggle = { setTheme } />*/ }
                </$NavbarGrid >
@@ -86,7 +87,9 @@ const $NavbarGrid = styled.nav`
                grid-row    : 1/2;
                grid-column : 2/3;
                }
+
           }
+
 `
 const $Menu = styled.div`
      grid-row        : 1/2;
@@ -97,8 +100,6 @@ const $Menu = styled.div`
 `
 
 const StyledLink = styled( Link )`
-     padding        : 4px 8px;
-     display        : block;
      font-size      : 1.8rem;
      text-align     : center;
      box-sizing     : border-box;
@@ -107,6 +108,11 @@ const StyledLink = styled( Link )`
      color          : ${ p => p.isActive ? `${ p.theme.WHITE }` : `${ p.theme.GREY }` };
      text-transform : uppercase;
 `
+const $IconWrapper = styled.div`
+     cursor : pointer;
+
+`
+
 const $User = styled( User )`
      width  : 4rem;
      height : 3.2rem;

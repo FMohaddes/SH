@@ -27,8 +27,8 @@ const $ButtonStyles = styled.button`
      border:.1rem solid ${p => p.tertiaryBorder ? `${ p.theme.TERTIARY_DARK }`
           :"none"};
      background      : ${ p => p.white ?
-          `${ p.theme.WHITE }` :p.tertiary ?`${ p.theme.TERTIARY }`
-               :`${ p.theme.GREY_DARK_2 }` };
+          "${ p.theme.WHITE }" :p.tertiary ?`${ p.theme.TERTIARY }`
+               :"transparent" };
      color           : ${ p => p.white ?
           `${ p.theme.GREY_DARK_2 } ` : `${ p.theme.WHITE }` };
 
@@ -42,7 +42,7 @@ const $ButtonStyles = styled.button`
           height : 5rem;`
                : p.sm && css`
           width  : 11rem;
-          height : 3.3rem;
+          height : 3.2rem;
                border-radius : 5rem;
           `
      }

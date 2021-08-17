@@ -13,18 +13,26 @@ export const H1_LG = styled.h1`
 export const H1 = styled.h1`
      font-weight : 900;
      font-size   : 5rem;
-  
+     ${ff}
 `
 
 export const H2 = styled.h2`
      font-weight : bold;
      font-size   : 40px;
-   
+     ${ff}
+
 `
 
 export const H3 = styled.h3`
      font-weight : 500;
      font-size   : 3rem;
+     ${ff}
+
+`
+
+export const H4 = styled.h4`
+     font-weight : 900;
+     font-size   : 2.3rem;
      ${ff}
 
 `
@@ -38,9 +46,10 @@ export const BodyIntro = styled.p`
 
 
 export const LargeText = styled.p`
-     font-weight : normal;
-     font-size   : 2.8rem;
+     font-weight : 900;
+     font-size   : 3.3rem;
      line-height : 140%;
+     ${ff}
 `
 
 
@@ -53,23 +62,15 @@ export const MediumText = styled.p`
 
 
 export const Caption = styled.p`
-
-     font-weight : 500;
-     font-size   : 15px;
-     line-height : 18px;
-`
-
-export const Caption2 = styled.p`
-     font-weight    : 600;
-     font-size      : 15px;
-     line-height    : 18px;
-     text-transform : uppercase;
+     font-weight : 400;
+     font-size   : 1.5rem;
+     line-height : 1.8rem;
 `
 
 
 export const SmallText = styled.p`
      font-weight : normal;
-     font-size   : 13px;
+     font-size   : 1.3rem;
      line-height : 130%;
 `
 
