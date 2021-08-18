@@ -1,39 +1,39 @@
 import styled , { css } from "styled-components";
 
-const ff=css`
-     font-family:'Playfair Display', serif;
+const ff = css`
+     font-family : 'Playfair Display', serif;
 `
 
 export const H1_LG = styled.h1`
      font-weight : 900;
      font-size   : 9rem;
-     ${ff}
+     ${ ff }
 `
 
 export const H1 = styled.h1`
      font-weight : 900;
      font-size   : 5rem;
-     ${ff}
+     ${ ff }
 `
 
 export const H2 = styled.h2`
      font-weight : bold;
      font-size   : 40px;
-     ${ff}
+     ${ ff }
 
 `
 
 export const H3 = styled.h3`
      font-weight : 500;
      font-size   : 3rem;
-     ${ff}
+     ${ ff }
 
 `
 
 export const H4 = styled.h4`
      font-weight : 900;
      font-size   : 2.3rem;
-     ${ff}
+     ${ ff }
 
 `
 
@@ -49,7 +49,7 @@ export const LargeText = styled.p`
      font-weight : 900;
      font-size   : 3.3rem;
      line-height : 140%;
-     ${ff}
+     ${ ff }
 `
 
 
@@ -77,7 +77,7 @@ export const SmallText = styled.p`
 export const MediumSpan = styled.span`
      font-weight : 300;
      font-size   : 1rem;
-     font-family  : 'Raleway', sans-serif;
+     font-family : 'Raleway', sans-serif;
      line-height : 130%;
 `
 

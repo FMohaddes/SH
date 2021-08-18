@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { H1_LG , LargeText , MediumSpan } from "../../../styles/global/typography";
 import { $CurvyShape , $CurvyShape2 } from "../../../styles/shapes";
 import CustomButton from "../../../components/common/customButtons";
+import { motion } from "framer-motion";
+import { HeaderText } from "../../../styles/animations/animations";
 
 
 function Header() {
@@ -12,16 +14,16 @@ function Header() {
                <$BoxWrapper />
                <$Box >
                     <$TextBox >
-                         <H1_LG >SHAHTOUR
-                              <MediumSpan >join us in this journey</MediumSpan >
+                         <H1_LG as={motion.h1} variants = { HeaderText }>SHAHTOUR
+                              <MediumSpan as={motion.span} variants = { HeaderText }>join us in this journey</MediumSpan >
                          </H1_LG >
-                         <CustomButton lg white >checkout</CustomButton >
+                         <CustomButton lg white as={motion.button} variants = { HeaderText }>See all tours</CustomButton >
                     </$TextBox >
                     <$BGVideo >
                          <video autoPlay muted loop >
-                              <source src = { "/images/homePage/header.mp4" }
+                              <source src = { "/videos/header.mp4" }
                                    type = "video/mp4" />
-                              <source src = { "/images/homePage/header.wbm" }
+                              <source src = { "/videos/header.wbm" }
                                    type = "video/webm" />
                          </video >
                     </$BGVideo >

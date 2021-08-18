@@ -25,11 +25,12 @@ function Navbar() {
           setIsOpen( !isOpen )
      }
      
+     
      function handleClickOutside() {
           setIsOpen( false )
      }
      
-     //
+
      // useEffect( () => {
      //      document.addEventListener( "mousedown" , handleClickOutside )
      //      return () => {
@@ -43,22 +44,23 @@ function Navbar() {
                <$NavbarGrid >
                     <Logo />
                     <$Menu >
-                         <StyledLink to = "/" isActive = { pathname === '/' } >
+                         <$Link to = "/" isActive = { pathname === '/' } >
                               Home
-                         </StyledLink >
-                         <StyledLink to = "/tours" isActive = { pathname === '/tours' } >
+                         </$Link >
+                         <$Link to = "/tours" isActive = { pathname === '/tours' } >
                               TOURS
-                         </StyledLink >
-                         <StyledLink to = "/hotels" isActive = { pathname === '/hotels' } >
+                         </$Link >
+                         <$Link to = "/hotels" isActive = { pathname === '/hotels' } >
                               HOTELS
-                         </StyledLink >
-                         <StyledLink to = "/contact" isActive = { pathname === '/contact' } >
+                         </$Link >
+                         <$Link to = "/contact" isActive = { pathname === '/contact' } >
                               CONTACT
-                         </StyledLink >
+                         </$Link >
                          <$IconWrapper onClick = { ( e ) => handleClick( e ) } >
                               <$User />
                          </$IconWrapper >
                          <AccountPopup isOpen = { isOpen } />
+                         
                     </$Menu >
                     {/*<Toggle isActive = { id === 'dark' } onToggle = { setTheme } />*/ }
                </$NavbarGrid >
@@ -71,6 +73,7 @@ export default Navbar;
 const $NavbarGrid = styled.nav`
      display               : grid;
      width                 : 100%;
+     
      grid-template-columns :minmax(4rem, 11rem) 1fr 1fr minmax(4rem, 11rem);
      height                : 15vh;
      background            : ${ p => p.theme.GREY_DARK_2 };
@@ -99,7 +102,7 @@ const $Menu = styled.div`
      align-items     : center;
 `
 
-const StyledLink = styled( Link )`
+const $Link = styled( Link )`
      font-size      : 1.8rem;
      text-align     : center;
      box-sizing     : border-box;

@@ -53,6 +53,11 @@ export const GlobalStyles = createGlobalStyle`
           //     background:var(--color-Grey-dark-1 );
           //     }
           }
+     form ,button , input {
+          font-family  : 'Raleway', sans-serif;
+          color:inherit;
+          font-weight: 500;
+          }
 
      code {
           font-family : source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

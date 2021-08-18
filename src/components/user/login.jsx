@@ -5,6 +5,8 @@ import { H2 , H3 , H4 , LargeText , SmallText } from "../../styles/global/typogr
 import CustomButton from "../common/customButtons";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
+import { ReactComponent as Mail } from "../../assets/icons/Mail.svg";
+import { ReactComponent as Key } from "../../assets/icons/key.svg";
 
 
 function Login( { onclick } ) {
@@ -25,15 +27,18 @@ function Login( { onclick } ) {
                     <FormInput
                          Ref = { inputElement }
                          name = ''
+                         Icon={<Mail/>}
+                         hasIcon
                          type = 'email'
                          placeholder = 'Email'
                          required
-                    
                     />
                     <FormInput
                          name = ''
+                         Icon={<Key/>}
+                         hasIcon
                          type = 'password'
-                         placeholder = 'password'
+                         placeholder = 'Password'
                          required
                     />
                     <$SmallText > Forget Password ?</$SmallText >
@@ -62,7 +67,7 @@ export default Login;
 const $Form = styled.form`
      justify-self : stretch;
      display      : grid;
-     grid-gap     : 1.5rem;
+     grid-gap     : 1.3rem;
      margin-top   : 1rem;
 
      div {
