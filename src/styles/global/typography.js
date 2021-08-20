@@ -32,7 +32,7 @@ export const H3 = styled.h3`
 
 export const H4 = styled.h4`
      font-weight : 900;
-     font-size   : 2.3rem;
+     font-size   : 2rem;
      ${ ff }
 
 `
@@ -56,7 +56,7 @@ export const LargeText = styled.p`
 export const MediumText = styled.p`
      font-weight : normal;
      font-size   : 1.7rem;
-     line-height : 130%;
+     line-height : 155%;
 
 `
 
@@ -71,7 +71,8 @@ export const Caption = styled.p`
 export const SmallText = styled.p`
      font-weight : normal;
      font-size   : 1.3rem;
-     line-height : 130%;
+     line-height : 150%;
+     z-index: 33;
 `
 
 export const MediumSpan = styled.span`

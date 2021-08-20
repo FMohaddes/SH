@@ -7,7 +7,7 @@ export const $CurvyShape = styled( CurvyShape )`
      position : absolute;
      top      : 0;
      left     : 0;
-     fill:${p => p.theme.SECONDARY_S};
+     fill:${p => p.theme.SECONDARY};
 
 `
 

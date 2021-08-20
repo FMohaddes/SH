@@ -17,7 +17,7 @@ export default FormInput;
 const $Wrapper = styled.div`
      position : relative;
      margin-top: -1rem;
-
+     
      > * {
           :nth-child(2) {
                position : absolute;

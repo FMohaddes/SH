@@ -43,13 +43,15 @@ const $HeaderWrapper = styled.header`
      display               : grid;
      grid-template-columns :minmax(3rem, 8rem) 1fr minmax(3rem, 8rem);
      position              : relative;
+     //padding-top: 1rem;
 `
 const $BoxWrapper = styled.div`
      background    : ${ p => p.theme.GREY_DARK_2 };
      grid-column   : 2/3;
      height        : 112%;
      grid-row      : 1/2;
-     border-radius : 4.3rem;
+     border-top-right-radius: 3rem;
+     border-top-left-radius: 3rem;
      box-shadow    : 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
           -4px -4px 10px 0 rgba(0, 0, 0, 0.1);
      @media only screen and (max-width : 50em) {
@@ -59,17 +61,15 @@ const $BoxWrapper = styled.div`
 `
 
 const $Box = styled.div`
-
      grid-row      : 1/2;
      grid-column   : 2/3;
      position      : relative;
-     background    : ${ p => `linear-gradient(to right bottom,
-     ${ p.theme.PRIMARY },
-     ${ p.theme.PRIMARY_DARK })` };
-
+     background-image : linear-gradient(to bottom, ${ p => p.theme.PRIMARY }, ${ p => p.theme.PRIMARY_DARK });
      height        : 112%;
      display       : grid;
-     border-radius : 4rem;
+     border-top-left-radius: 3rem;
+     border-top-right-radius: 3rem;
+     
      overflow      : hidden;
      @media only screen and (max-width : 50em) {
           grid-column   : 1/-1;

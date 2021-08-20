@@ -1,27 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ToggleWrapper = styled.div`
-     width            : 50px;
-     min-width        : 50px;
-     height           : 25px;
-     border-radius    : 25px;
-     border           : 1px solid #666;
-     margin           : auto;
-     display          : flex;
-     background-image : linear-gradient(to bottom, ${ p => p.theme.primaryColor }, ${ p => p.theme.secondaryColor });
-`;
-
-const Notch = styled.div`
-     height        : 21px;
-     width         : 21px;
-     border        : 1px solid #666;
-     margin-top    : 1px;
-     background    : white;
-     border-radius : 50%;
-     transition    : transform 0.1s linear;
-     transform     : translate(${ p => p.isActive ? '26px' : '1px' });
-`
 
 export function Toggle( { isActive , onToggle } ) {
      return (
@@ -30,3 +9,24 @@ export function Toggle( { isActive , onToggle } ) {
           </ToggleWrapper >
      )
 }
+
+const ToggleWrapper = styled.div`
+     width            : 5rem;
+     min-width        : 5rem;
+     height           : 2.5rem;
+     border-radius    : 2.5rem;
+     border           : .1rem solid ${ p => p.theme.GREY };
+     margin           : auto;
+     display          : flex;
+`;
+
+const Notch = styled.div`
+     height        : 2.1rem;
+     width         : 2.1rem;
+     border        : .1rem solid #666;
+     background    : white;
+     margin-top    : .1rem;
+     border-radius : 50%;
+     transition    : transform 0.1s linear;
+     transform     : translate(${ p => p.isActive ? '2.6rem' : '.1rem' });
+`

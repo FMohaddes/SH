@@ -26,8 +26,9 @@ export default HomePage;
 export const $HomePageGrid = styled.div`
      display               : grid;
      grid-template-columns :minmax(3rem, 8rem) 1fr minmax(3rem, 8rem);
-     grid-row-gap          : 15rem;
+     grid-row-gap          : 18rem;
      grid-column-gap       : 1rem;
      overflow              : hidden;
      position              : relative;
+   
 `

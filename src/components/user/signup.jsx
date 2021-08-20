@@ -54,7 +54,7 @@ function Signup( { onclick } ) {
                          required
                     />
                     
-                    <$CustomButton sm tertiary >Signup</$CustomButton >
+                    <$CustomButton sm tertiary type={"submit"}>Signup</$CustomButton >
                     <$SignIn > or sign in with</$SignIn >
                     <div >
                          <$CustomButtonSignIN sm tertiaryBorder >

@@ -9,7 +9,7 @@ function About() {
      return (
           <$AboutGrid >
                <$H2 >About us</$H2 >
-               <$AboutImg src = { "/images/about.png" } />
+               <$AboutImg src = { "/images/homePage/about.png" } />
                <$MediumText >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit
                     . Accusantium, aliquid aut dolore illo minima, neque placeat provident quaerat qui
@@ -33,6 +33,7 @@ function About() {
                     sit vitae.
                
                </$MediumText >
+               <$ReadMore>Read more &rarr;</$ReadMore>
           </$AboutGrid >
      );
 }
@@ -40,16 +41,15 @@ function About() {
 export default About;
 
 const $AboutGrid = styled.section`
-     margin-top  : 5rem;
      grid-column : 2/3;
-     height      : 55rem;
-
+     height      : 70vh;
+     position    : relative;
 `
 const $H2 = styled( H2 )`
      display                 : inline-block;
      background              : ${ p => `linear-gradient(to right bottom,
-     ${ p.theme.GREY },
-     ${ p.theme.GREY_DARK })` };
+     ${ p.theme.GREY_DARK_2 },
+     ${ p.theme.GREY })` };
      -webkit-background-clip : text;
      color                   : transparent;
 `
@@ -61,26 +61,26 @@ const $MediumText = styled( MediumText )`
 const $AboutImg = styled.img`
      height        : 34rem;
      float         : right;
-     shape-outside : url("/images/about.png");
-     margin-top    : 1rem;
-     margin-right  : -4rem;
-     shape-margin  : 25px;
+     shape-outside : url("/images/homePage/about.png");
+     margin-top    : 2.6rem;
+     margin-right  : -4.5rem;
+     shape-margin  : 2.5rem;
 
 `
 const $ReadMore = styled( Link )`
      &:link,
      &:visited {
-          color           : ${ p => p.theme.PRIMARY };
+          color           : ${ p => p.theme.TERTIARY };
           display         : inline-block;
           text-decoration : none;
-          border-bottom   : .1rem solid ${ p => p.theme.PRIMARY };
+          border-bottom   : .1rem solid ${ p => p.theme.TERTIARY };
           padding         : .3rem;
           margin-top      : .5rem;
-          font-weight     : 400;
+          font-weight     : 800;
           font-size       : 1.5rem;
 
           &:hover {
-               background-color : ${ p => p.theme.PRIMARY };
+               background-color : ${ p => p.theme.TERTIARY };
                color            : ${ p => p.theme.WHITE };
                //box-shadow : 0 1rem 2rem rgba(var(--color-Black), .15);
                }
@@ -90,7 +90,4 @@ const $ReadMore = styled( Link )`
                transform : translateY(0);
                }
           }
-
-
-
 `

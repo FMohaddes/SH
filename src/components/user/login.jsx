@@ -42,7 +42,7 @@ function Login( { onclick } ) {
                          required
                     />
                     <$SmallText > Forget Password ?</$SmallText >
-                    <$CustomButton sm tertiary >Login</$CustomButton >
+                    <$CustomButton sm tertiary type={"submit"}>Login</$CustomButton >
                     <$SignIn > or sign in with</$SignIn >
                     <div >
                          <$CustomButtonSignIN sm tertiaryBorder >
