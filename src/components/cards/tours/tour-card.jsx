@@ -101,12 +101,12 @@ const $TextBox = styled.div`
      align-content   : start;
      grid-column     : 1/-1;
      height          : 25rem;
-     color           : ${ p => p.theme.GREY_DARK };
+     color           : ${ p => p.theme.WHITE };
      grid-row        : 1/2;
      padding         : 3rem 0 0 3rem;
      z-index         : 44;
      clip-path       : polygon(-50% -20%, 65% 0%, 35% 100%, 0% 100%);
-     background      : ${ p => p.theme.WHITE };
+     background      : ${ p => p.theme.TERTIARY };
      //backdrop-filter : blur(1rem);
      span {
           shape-outside : polygon(0% -20%, 75% 0%, 10% 100%, 0% 100%);

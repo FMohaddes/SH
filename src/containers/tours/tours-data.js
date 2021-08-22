@@ -8,7 +8,7 @@ export const tours_data = [
           days     : 5 ,
           capacity : 7 ,
           hotel    : "Ritz Paris" ,
-          rating:4,
+          rating   : 4 ,
           
      } ,
      {
@@ -20,9 +20,9 @@ export const tours_data = [
           days     : 3 ,
           capacity : 11 ,
           hotel    : "The Savoy Hotel" ,
-          rating:5,
-     
-     
+          rating   : 5 ,
+          
+          
      } ,
      {
           id       : 3 ,
@@ -33,9 +33,9 @@ export const tours_data = [
           days     : 4 ,
           capacity : 14 ,
           hotel    : "Hilton Sydney" ,
-          rating:4,
-     
-     
+          rating   : 4 ,
+          
+          
      } ,
      {
           id       : 4 ,
@@ -46,8 +46,8 @@ export const tours_data = [
           days     : 4 ,
           capacity : 14 ,
           hotel    : "Hilton Sydney" ,
-          rating:4,
-     
+          rating   : 4 ,
+          
      } ,
      {
           id       : 5 ,
@@ -58,8 +58,8 @@ export const tours_data = [
           days     : 4 ,
           capacity : 23 ,
           hotel    : "Hilton Sydney" ,
-          rating:5,
-     
+          rating   : 5 ,
+          
      } ,
      {
           id       : 6 ,
@@ -70,7 +70,7 @@ export const tours_data = [
           days     : 5 ,
           capacity : 11 ,
           hotel    : "Hilton Sydney" ,
-          rating:4,
-     
+          rating   : 4 ,
+          
      } ,
 ]

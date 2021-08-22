@@ -34,8 +34,8 @@ const $LatestToursWrapper = styled.section`
 `
 
 const $Heading = styled.div`
-     display       : flex;
-     justify-self: center;
+     display      : flex;
+     justify-self : center;
 `
 const $H2 = styled( H2 )`
      background              : ${ p => `linear-gradient(to right bottom,
@@ -43,5 +43,5 @@ const $H2 = styled( H2 )`
      ${ p.theme.GREY })` };
      -webkit-background-clip : text;
      color                   : transparent;
-     font-size: 6rem;
+     font-size               : 6rem;
 `

@@ -17,8 +17,8 @@ function Features() {
                     icon  : <Heart /> ,
                     id    : 1 ,
                     text  : "  Lorem ipsum dolor sit amet, consectetur \n" +
-                         "            adipisicing elit. Aliquam, atque consectetur?Lorem ipsum dolor sit amet, consectetur \n" +
-                         "            adipisicing elit. Aliquam, atque consectetur?"
+                         " elit. Aliquam, atque consectetur?Lorem ipsum dolor sit amet, consectetur \n" +
+                         "adipisicing elit. Aliquam, atque consectetur?"
                } ,
                {
                     title : 'Explore the world' ,

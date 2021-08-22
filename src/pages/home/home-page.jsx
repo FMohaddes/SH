@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import About from "./components/about";
 import Features from "./components/features";
 import LatestToursSlider from "../../containers/tours/latestToursSlider/latest-tours.slider";
+import LatestPosts from "../../containers/blog/latestTours/latest-posts";
 
 function HomePage() {
      return (
@@ -17,6 +18,7 @@ function HomePage() {
                     <About/>
                     <Features/>
                     <LatestToursSlider/>
+                    <LatestPosts/>
                </$HomePageGrid >
           </motion.div >
      );
