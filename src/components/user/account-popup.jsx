@@ -33,7 +33,7 @@ const $Wrapper = styled.div`
      top             : 7.5rem;
      right           : 11rem;
      background      : ${ p => p.theme.WHITE_O };
-     box-shadow      : 0 50px 100px rgba(0, 0, 0, 0.25),
+     box-shadow      : 0 5rem 10rem rgba(0, 0, 0, 0.25),
      inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
      backdrop-filter : blur(6rem);
      border-radius   : 2rem;

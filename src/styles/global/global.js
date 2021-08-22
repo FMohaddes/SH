@@ -49,6 +49,7 @@ export const GlobalStyles = createGlobalStyle`
           background: ${ p => p.theme.GREY_LIGHT};
           font-family  : 'Raleway', sans-serif;
           font-weight  : 400;
+          //font-display:swap;
           //@media( prefers-color-scheme:dark){
           //     background:var(--color-Grey-dark-1 );
           //     }

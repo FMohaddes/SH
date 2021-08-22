@@ -54,7 +54,7 @@ function Navbar() {
                               TOURS
                          </$Link >
                          <$Link to = "/hotels" isActive = { pathname === '/hotels' } >
-                              HOTELS
+                              BLOG
                          </$Link >
                          <$Link to = "/contact" isActive = { pathname === '/contact' } >
                               CONTACT
@@ -124,7 +124,7 @@ const $IconWrapper = styled.div`
 
 const $User = styled( User )`
      width  : 4rem;
-     height : 2.8rem;
+     height : 3rem;
      fill   : ${ p => p.theme.GREY_LIGHT };
      cursor : pointer;
 `

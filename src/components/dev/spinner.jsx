@@ -12,7 +12,7 @@ export default Spinner;
 
 
 export const SpinnerOverlay = styled.div`
-     height: 100vh;
+     height          : 100vh;
      width           : 100%;
      display         : flex;
      justify-content : center;
@@ -21,11 +21,11 @@ export const SpinnerOverlay = styled.div`
 
 export const SpinnerContainer = styled.div`
      display           : inline-block;
-     width             : 50px;
-     height            : 50px;
-     border            : 5px solid var(--c-grey-light-2);
+     width             : 4rem;
+     height            : 4rem;
+     border            : .5rem solid ${ p => p.theme.GREY_LIGHT_2 };
      border-radius     : 50%;
-     border-top-color  : var(--c-blue-dark);
+     border-top-color  : ${ p => p.theme.PRIMARY };
      animation         : spin 1s ease-in-out infinite;
      -webkit-animation : spin 1s ease-in-out infinite;
      @keyframes spin {

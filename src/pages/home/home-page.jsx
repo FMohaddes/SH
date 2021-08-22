@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import About from "./components/about";
 import Features from "./components/features";
+import LatestToursSlider from "../../containers/tours/latestToursSlider/latest-tours.slider";
 
 function HomePage() {
      return (
@@ -15,6 +16,7 @@ function HomePage() {
                     <Header />
                     <About/>
                     <Features/>
+                    <LatestToursSlider/>
                </$HomePageGrid >
           </motion.div >
      );

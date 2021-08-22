@@ -53,19 +53,19 @@ function Features() {
      } )
      
      return (
-          <$Features >
-               <FeaturesCarousel items = { state.features } SlidesNumber = { 4 } />
-          </$Features >
+          <$FeaturesWrapper >
+               <FeaturesCarousel items = { state.features } SlidesNumber = { 4 } dots={true}/>
+          </$FeaturesWrapper >
      );
 }
 
 export default Features;
 
 
-const $Features = styled.section`
+const $FeaturesWrapper = styled.section`
      grid-column           : 1/-1;
      display               : grid;
-     padding               : 9rem 5.9rem;
+     padding               : 9rem 6rem;
      box-shadow            : 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
           -4px -4px 10px 0 rgba(0, 0, 0, 0.1);
      background            : ${ p => `linear-gradient(to right bottom,

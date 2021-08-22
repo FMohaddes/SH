@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function About() {
      return (
           <$AboutGrid >
-               <$H2 >About us</$H2 >
+               <$H2 >About Us</$H2 >
                <$AboutImg src = { "/images/homePage/about.png" } />
                <$MediumText >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -33,7 +33,7 @@ function About() {
                     sit vitae.
                
                </$MediumText >
-               <$ReadMore>Read more &rarr;</$ReadMore>
+               <$ReadMore to={"/"}>Read more &rarr;</$ReadMore>
           </$AboutGrid >
      );
 }

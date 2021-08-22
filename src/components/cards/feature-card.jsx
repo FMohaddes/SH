@@ -23,16 +23,17 @@ const $CardGrid = styled.div`
      display        : flex;
      flex-direction : column;
      background     : ${ p => p.theme.GREY_LIGHT };
+     backdrop-filter : blur(6rem);
      height         : 35rem;
      width          : 25rem;
-     margin         : 2rem 3rem;
-     padding        : 2.5rem;
+      padding        : 2.5rem;
+     margin: 2rem 3rem;
      align-items    : center;
      position       : relative;
      border-radius  : 2rem;
      overflow       : hidden;
-     box-shadow     : 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
-          -4px -4px 10px 0 rgba(0, 0, 0, 0.1);
+     box-shadow     : .4rem .4rem 1rem 0 rgba(0, 0, 0, 0.1),
+          -.4rem -.4rem 1rem 0 rgba(0, 0, 0, 0.1);
 
      > * {
 
@@ -41,6 +42,11 @@ const $CardGrid = styled.div`
                height  : 8rem;
                fill    : ${ p => p.theme.TERTIARY };
                z-index : 33;
+               transition: 1s all;
+               &:hover{
+                    fill    : ${ p => p.theme.TERTIARY_LIGHT };
+
+                    }
                }
 
           }

@@ -18,7 +18,7 @@ const PrimaryTheme = {
      SECONDARY       : "hsl(53, 100%, 50%)" ,
      SECONDARY_S     : "hsl(53, 60%, 50%)" ,
      SECONDARY_DARK  : "hsl(53, 100%, 25%)" ,
-     TERTIARY_LIGHT  : "hsl(23, 100%, 75%)" ,
+     TERTIARY_LIGHT  : "hsl(23, 100%, 66%)" ,
      TERTIARY        : "hsl(23, 100%, 50%)" ,
      TERTIARY_DARK   : "hsl(23, 100%, 25%)" ,
      TEXT_SHADOW     : ".1rem .1rem .6rem hsl(0, 0%, 35%)" ,
