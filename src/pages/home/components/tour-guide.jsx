@@ -56,12 +56,12 @@ function TourGuide() {
                          </$Photo >
                          
                          <H4 >Fateme Mohaddes</H4 >
-                         <SmallText >Duis dignissim mi ut laoreet mollis. Nunc id tellus finibus, eleifend mi
+                         <SmallText >built by fmohadds ut laoreet mollis. Nunc id tellus finibus, eleifend mi
                               vel, maximus justo. Maecenas mi tortor.</SmallText >
                     </$Info >
                     <$Info >
                          <$Photo >
-                              <img src = { "/images/tourguide/fmohaddes.jpg" } />
+                              <img src = { "/images/tourguide/hanieh.jpg" } />
                               <div >
                                    <$SocialMedia >
                                         <Instagram />
@@ -75,7 +75,7 @@ function TourGuide() {
                               </div >
      
                          </$Photo >
-                         <H4 >Fateme Mohaddes</H4 >
+                         <H4 >Hanieh Yazdian</H4 >
                          <SmallText >Duis dignissim mi ut laoreet mollis. Nunc id tellus finibus, eleifend mi
                               vel, maximus justo. Maecenas mi tortor.</SmallText >
                     </$Info >
