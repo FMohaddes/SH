@@ -18,7 +18,7 @@ function LatestToursSlider() {
                     <$H2 >Latest Tours</$H2 >
                </$Heading >
                
-               <LatestToursCarousel items = { state.tours } SlidesNumber = { 3 } dots = { false } />
+               <LatestToursCarousel items = { state.tours } SlidesNumber = { 3 } dots = { true } />
           </$LatestToursWrapper >
      );
 }
@@ -36,12 +36,15 @@ const $LatestToursWrapper = styled.section`
 const $Heading = styled.div`
      display      : flex;
      justify-self : center;
+    
 `
+
 const $H2 = styled( H2 )`
+     display                 : inline-block;
      background              : ${ p => `linear-gradient(to right bottom,
-     ${ p.theme.GREY_DARK },
+     ${ p.theme.GREY_DARK_2 },
      ${ p.theme.GREY })` };
      -webkit-background-clip : text;
      color                   : transparent;
-     font-size               : 6rem;
+    font-size: 5rem;
 `

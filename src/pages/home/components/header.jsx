@@ -5,9 +5,11 @@ import { $CurvyShape , $CurvyShape2 } from "../../../styles/shapes";
 import CustomButton from "../../../components/common/customButtons";
 import { motion } from "framer-motion";
 import { HeaderText } from "../../../styles/animations/animations";
+import { useHistory } from "react-router-dom";
 
 
 function Header() {
+     const history=useHistory();
      return (
           
           <$HeaderWrapper >
@@ -17,7 +19,9 @@ function Header() {
                          <H1_LG as={motion.h1} variants = { HeaderText }>SHAHTOUR
                               <MediumSpan as={motion.span} variants = { HeaderText }>join us in this journey</MediumSpan >
                          </H1_LG >
-                         <CustomButton lg white as={motion.button} variants = { HeaderText }>See all tours</CustomButton >
+                         <CustomButton lg white as={motion.button} variants = { HeaderText }
+                              onClick = { () => (
+                                   history.push( "/tours" ))}>See all tours</CustomButton >
                     </$TextBox >
                     <$BGVideo >
                          <video autoPlay muted loop >

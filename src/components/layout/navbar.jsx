@@ -106,6 +106,7 @@ const $Menu = styled.div`
      grid-auto-flow  : column;
      align-items     : center;
      padding         : 1rem 0 0;
+     
 `
 
 const $Link = styled( Link )`

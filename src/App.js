@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/global/global";
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./components/dev/scroll-to-top";
+import Footer from "./components/layout/footer";
 
 const HomePage = lazy( () => import("./pages/home/home-page") )
 
@@ -27,14 +28,15 @@ function App() {
                     <GlobalStyles />
                     <AnimatePresence exitBeforeEnter >
                          {/*<ScrollToTop/>*/}
-                         <Navbar />
                          <Switch location = { location } key = { location.pathname } >
                               <ErrorBoundary >
                                    <Suspense fallback = { <Spinner /> } >
+                                        <Navbar />
                                         <Route exact path = '/' component = { HomePage } />
                                    </Suspense >
                               </ErrorBoundary >
                          </Switch >
+                         <Footer/>
                     </AnimatePresence >
                
                </ThemeProvider >

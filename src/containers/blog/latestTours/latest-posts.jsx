@@ -27,23 +27,24 @@ export default LatestPosts;
 
 const $LatestPostsWrapper = styled.section`
      grid-column        : 2/3;
-     height             : 66rem;
      display            : grid;
      grid-template-rows : min-content 1fr;
      
 `
 
 const $H2 = styled( H2 )`
+     display                 : inline-block;
      background              : ${ p => `linear-gradient(to right bottom,
-     ${ p.theme.GREY_DARK },
+     ${ p.theme.GREY_DARK_2 },
      ${ p.theme.GREY })` };
      -webkit-background-clip : text;
      color                   : transparent;
-     padding                 : 0 2rem 2rem;
+     font-size: 5rem;
+
 `
 const $PostsWrapper = styled.div`
+     margin-top: 3rem;
      display               : grid;
-     grid-template-columns : 1fr 1fr;
-     grid-gap              : 3rem;
-
+     grid-gap              : 5rem;
+     grid-template-columns: repeat(auto-fit, minmax(44rem, 1fr));
 `

@@ -1,7 +1,7 @@
 export const PageAnimation = {
      hidden : {
           
-          opacity : 0.9 ,
+          opacity : 1 ,
      } ,
      show   : {
           opacity    : 1 ,

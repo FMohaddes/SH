@@ -8,6 +8,8 @@ import About from "./components/about";
 import Features from "./components/features";
 import LatestToursSlider from "../../containers/tours/latestToursSlider/latest-tours.slider";
 import LatestPosts from "../../containers/blog/latestTours/latest-posts";
+import Stories from "./components/stories";
+import TourGuide from "./components/tour-guide";
 
 function HomePage() {
      return (
@@ -17,8 +19,11 @@ function HomePage() {
                     <Header />
                     <About/>
                     <Features/>
-                    <LatestToursSlider/>
                     <LatestPosts/>
+                    <LatestToursSlider/>
+                    <Stories/>
+                    <TourGuide/>
+                    
                </$HomePageGrid >
           </motion.div >
      );

@@ -46,7 +46,7 @@ function TourCard( { title , image , capacity , hotel , rating , days , price } 
                     <$Rating >
                          { state.map( ( { fill , id } ) => {
                               return fill === true ?
-                                   <$Star key = { id } fill = { fill } /> :
+                                   <$Star key = { id } fill /> :
                                    <$Star key = { id } />
                          } )
                          }
@@ -63,8 +63,8 @@ export default TourCard;
 
 const $TourCard = styled.div`
      width         : 35rem;
-     height        : 30rem;
-     border-radius : 3.5rem 3.5rem 4.5rem 4.5rem;
+     height        : 35rem;
+     border-radius: 2rem;
      overflow      : hidden;
      display       : grid;
      box-shadow    : 0 .5rem .5rem rgba(0, 0, 0, 0.25),
@@ -81,7 +81,7 @@ const $Img = styled.div`
      background-size     : cover;
      background-position : 20% 50%;
      width               : 85%;
-     height              : 25rem;
+     height              : 30rem;
      justify-self        : end;
      object-fit          : cover;
      //transform     : translateX(5rem);
@@ -100,13 +100,13 @@ const $TextBox = styled.div`
      justify-content : start;
      align-content   : start;
      grid-column     : 1/-1;
-     height          : 25rem;
-     color           : ${ p => p.theme.WHITE };
+     height          : 30rem;
+     color           : ${ p => p.theme.GREY_DARK_2 };
      grid-row        : 1/2;
      padding         : 3rem 0 0 3rem;
      z-index         : 44;
      clip-path       : polygon(-50% -20%, 65% 0%, 35% 100%, 0% 100%);
-     background      : ${ p => p.theme.TERTIARY };
+     background      : ${ p => p.theme.WHITE };
      //backdrop-filter : blur(1rem);
      span {
           shape-outside : polygon(0% -20%, 75% 0%, 10% 100%, 0% 100%);
@@ -117,6 +117,8 @@ const $TextBox = styled.div`
 
           :nth-child(1) {
                font-size : 3.5rem;
+               font-family  : 'Raleway', sans-serif;
+               font-weight: 800;
                }
           }
 `

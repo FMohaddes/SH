@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 
-const Slideshow = WrapperComponent => ( { SlidesNumber , items , dots } ) => {
+const Slideshow = WrapperComponent => ( { SlidesNumber, single , items , dots } ) => {
      
      const settings = {
           dots           : dots ,
@@ -25,7 +25,7 @@ const Slideshow = WrapperComponent => ( { SlidesNumber , items , dots } ) => {
                {
                     breakpoint : 800 ,
                     settings   : {
-                         slidesToShow   : SlidesNumber - 2 ,
+                         slidesToShow   : SlidesNumber-2 ,
                          slidesToScroll : 1 ,
                          initialSlide   : 2
                     }
@@ -33,14 +33,14 @@ const Slideshow = WrapperComponent => ( { SlidesNumber , items , dots } ) => {
                {
                     breakpoint : 480 ,
                     settings   : {
-                         slidesToShow   : SlidesNumber - 2 ,
+                         slidesToShow   :1 ,
                          slidesToScroll : 1
                     }
                }
           ]
      };
      return (
-          <$StyledSlider dots = { dots } >
+          <$StyledSlider dots = { dots } single={single}>
                <Slider { ...settings }>
                     { items.map( ( { id , ...otherprops } ) =>
                          <WrapperComponent key = { id } { ...otherprops } /> )
@@ -56,6 +56,8 @@ export const $StyledSlider = styled.div`
        position: relative;
      .slick-slider {
           display : grid;
+          justify-content: center;
+          align-content: center;
           .slick-list {
                display        : grid;
                grid-auto-flow : column;
@@ -99,7 +101,7 @@ export const $StyledSlider = styled.div`
                          text-align    : center;
                          color         : ${ p => p.theme.BLACK };
                          opacity       : .5;
-                         background    : ${ p => p.theme.WHITE };
+                         background    : ${ p => p.theme.GREY_DARK_2 };
                          transform     : translate(-50%, -50%);
                          transition    : all .3s ease-in-out;
                          }
@@ -118,13 +120,13 @@ export const $StyledSlider = styled.div`
           }
 
      .slick-prev, .slick-next {
-          visibility : ${ p => p.dots ? "hidden" : "visible" };
+          visibility : ${ p => p.dots ? "hidden": p.single ? "hidden": "visible" };
             position: absolute;
           }
 
      .slick-next::before {
           content            : '';
-          background-color   : ${ p => p.theme.GREY };
+          background-color   : ${ p => p.theme.TERTIARY };
           -webkit-mask-image : url('/images/arrow/next_page.svg');
           -webkit-mask-size  : cover;
           height             : 5rem;
@@ -134,7 +136,7 @@ export const $StyledSlider = styled.div`
 
      .slick-prev::before {
           content            : '';
-          background-color   : ${ p => p.theme.GREY };
+          background-color   : ${ p => p.theme.TERTIARY };
           -webkit-mask-image : url('/images/arrow/next_page.svg');
           -webkit-mask-size  : cover;
           transform          : scale(-1);
@@ -146,12 +148,12 @@ export const $StyledSlider = styled.div`
           }
 
      .slick-next {
-          right : 3vw;
-          top   : -10rem;
+          right : 5.5vw;
+          top   : -8rem;
           }
 
      .slick-prev {
           left : 3vw;
-          top  : -10rem;
+          top  : -8rem;
           }
 `

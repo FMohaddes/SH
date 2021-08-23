@@ -44,7 +44,10 @@ const $AboutGrid = styled.section`
      grid-column : 2/3;
      height      : 70vh;
      position    : relative;
+     margin-top: 5rem;
+     
 `
+
 const $H2 = styled( H2 )`
      display                 : inline-block;
      background              : ${ p => `linear-gradient(to right bottom,
@@ -52,6 +55,8 @@ const $H2 = styled( H2 )`
      ${ p.theme.GREY })` };
      -webkit-background-clip : text;
      color                   : transparent;
+     font-size: 5rem;
+
 `
 
 

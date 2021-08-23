@@ -71,9 +71,6 @@ const $FeaturesWrapper = styled.section`
      background            : ${ p => `linear-gradient(to right bottom,
      ${ p.theme.PRIMARY },
      ${ p.theme.PRIMARY_DARK })` };
-     background-position   : top;
-     background-size       : cover;
-
-
+     
 `
 
