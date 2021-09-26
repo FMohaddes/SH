@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
      :root {
           /* : 75em; // 1200px*/
           /*   : 62.5em; // 1000px*/
@@ -47,12 +47,13 @@ export const GlobalStyles = createGlobalStyle`
           text-align   : justify;
           text-justify : inter-word;
           background: ${ p => p.theme.GREY_LIGHT};
+          color:${ p => p.theme.GREY_DARK};
           font-family  : 'Raleway', sans-serif;
           font-weight  : 400;
-          //font-display:swap;
-          //@media( prefers-color-scheme:dark){
-          //     background:var(--color-Grey-dark-1 );
-          //     }
+          // @media( prefers-color-scheme:dark){
+          //      background: ${ p => p.theme.GREY_DARK_2};
+          //
+          //      }
           }
      form ,button , input {
           font-family  : 'Raleway', sans-serif;

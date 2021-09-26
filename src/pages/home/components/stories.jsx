@@ -19,7 +19,6 @@ function Stories() {
           }
           fetchFunc();
      } , [] );
-     console.log( state.users.results )
      return (
           <$StoriesWrapper >
                {

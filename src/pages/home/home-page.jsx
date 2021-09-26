@@ -10,12 +10,12 @@ import LatestToursSlider from "../../containers/tours/latestToursSlider/latest-t
 import LatestPosts from "../../containers/blog/latestTours/latest-posts";
 import Stories from "./components/stories";
 import TourGuide from "./components/tour-guide";
+import Navbar from "../../components/layout/navbar";
 
 function HomePage() {
      return (
-          <motion.div variants = { PageAnimation } initial = "hidden" animate = "show" >
-               
-               <$HomePageGrid >
+               <$HomePageGrid variants = { PageAnimation } initial = "hidden" animate = "show">
+                    
                     <Header />
                     <About/>
                     <Features/>
@@ -25,19 +25,17 @@ function HomePage() {
                     <TourGuide/>
                     
                </$HomePageGrid >
-          </motion.div >
      );
 }
 
 export default HomePage;
 
 
-export const $HomePageGrid = styled.div`
+export const $HomePageGrid = styled(motion.div)`
      display               : grid;
-     grid-template-columns :minmax(3rem, 8rem) 1fr minmax(3rem, 8rem);
+     grid-template-columns :minmax(3rem, 8rem) 1fr minmax(3rem, 8rem) ;
      grid-row-gap          : 18rem;
      grid-column-gap       : 1rem;
      overflow              : hidden;
      position              : relative;
-   
 `

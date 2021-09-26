@@ -26,15 +26,18 @@ function Login( { onclick } ) {
                <$Form >
                     <FormInput
                          Ref = { inputElement }
-                         name = ''
+                         name = 'email'
                          Icon={<Mail/>}
                          hasIcon
                          type = 'email'
                          placeholder = 'Email'
                          required
+                         onMouseEnter={() => {
+                              inputElement.current.focus()
+                         }}
                     />
                     <FormInput
-                         name = ''
+                         name = 'password'
                          Icon={<Key/>}
                          hasIcon
                          type = 'password'
@@ -89,13 +92,13 @@ const $CustomButtonSignIN = styled( $CustomButton )`
 
 
 const $SmallText = styled( SmallText )`
-     color        : ${ props => props.theme.GREY_DARK_2 };
+     color        : ${ p => p.theme.GREY_DARK_2 };
      justify-self : start;
      padding      : .4rem .3rem 0;
 
      a {
           text-decoration : underline;
-          color           : ${ props => props.theme.TERTIARY_DARK };
+          color           : ${ p => p.theme.TERTIARY_DARK };
           cursor          : pointer;
           }
 `
@@ -105,7 +108,7 @@ export const $SignIn = styled.p`
      grid-column-gap       : .5rem;
      align-items           : center;
      font-size             : 1.4rem;
-     color                 : ${ props => props.theme.GREY };
+     color                 : ${ p => p.theme.GREY };
      display               : grid;
      font-weight           : 300;
      grid-template-columns : 1fr max-content 1fr;

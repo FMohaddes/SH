@@ -5,7 +5,8 @@ function FormInput( { name , type , placeholder , Ref , hasIcon , Icon , ...othe
      return (
           <$Wrapper >
                <$Input ref = { Ref } type = { type } placeholder = { placeholder }
-                    name = { name } { ...other } icon = { hasIcon } />
+                    name = { name } { ...other } icon = { hasIcon } autoComplete={"off"}
+               />
                { Icon }
           </$Wrapper >
      

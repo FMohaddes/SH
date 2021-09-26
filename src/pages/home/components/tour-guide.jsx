@@ -18,15 +18,15 @@ function TourGuide() {
                <$InfoWrapper >
                     <$Info >
                          <$Photo >
-                              <img src = { "/images/tourguide/sahar.jpg" } />
+                              <img src = { "/images/tourguide/fmohaddes.jpg" } />
                               <div >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Instagram />
                                    </$SocialMedia >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Facebook />
                                    </$SocialMedia >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Telegram />
                                    </$SocialMedia >
                               </div >
@@ -38,13 +38,13 @@ function TourGuide() {
                     </$Info >
                     <$Info >
                          <$Photo >
-                              <img src = { "/images/tourguide/fmohaddes.jpg" } />
+                              <img src = { "/images/tourguide/fmohaddes.jpg" }/>
                               <div >
                                    <$SocialMedia to={{ pathname: "https://instagram.com/fmohaddes" }}
                                         target="_blank">
                                         <Instagram />
                                    </$SocialMedia >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Facebook />
                                    </$SocialMedia >
                                    <$SocialMedia to={{ pathname: "https://t.me/FMohaddes" }}
@@ -61,15 +61,15 @@ function TourGuide() {
                     </$Info >
                     <$Info >
                          <$Photo >
-                              <img src = { "/images/tourguide/hanieh.jpg" } />
+                              <img src = {"/images/tourguide/fmohaddes.jpg" } />
                               <div >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Instagram />
                                    </$SocialMedia >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Facebook />
                                    </$SocialMedia >
-                                   <$SocialMedia >
+                                   <$SocialMedia to={"/"}>
                                         <Telegram />
                                    </$SocialMedia >
                               </div >

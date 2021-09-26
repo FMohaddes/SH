@@ -1,9 +1,10 @@
 export const PageAnimation = {
      hidden : {
-          
-          opacity : 1 ,
+          y:300,
+          opacity : .9 ,
      } ,
      show   : {
+          y:0,
           opacity    : 1 ,
           transition : {
                duration : 1 ,
@@ -15,6 +16,8 @@ export const PageAnimation = {
      },
      
      exit   : {
+          y:300,
+     
           opacity    : .9 ,
           transition : {
                duration : .5 ,

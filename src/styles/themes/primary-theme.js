@@ -10,14 +10,14 @@ const PrimaryTheme = {
      GREY_DARK_O     : "hsla(0, 0%, 35%,.8)" ,
      GREY_DARK_2     : "hsl(0, 0%, 15%)" ,
      GREY_DARK_2_O   : "hsla(0, 0%, 15%,.8)" ,
-     PRIMARY_LIGHT   : "hsla(144, 100%, 75%,1)" ,
-     PRIMARY         : "hsla(144, 100%, 50%,1)" ,
+     PRIMARY_LIGHT   : "hsl(144, 100%, 75%)" ,
+     PRIMARY         : "hsl(144, 100%, 50%)" ,
      PRIMARY_O       : "hsla(144, 100%, 50%, .44)" ,
      PRIMARY_DARK    : "hsla(150, 100%, 25%,1)" ,
      SECONDARY_LIGHT : "hsl(53, 100%, 75%)" ,
      SECONDARY       : "hsl(53, 100%, 50%)" ,
      SECONDARY_S     : "hsl(53, 60%, 50%)" ,
-     SECONDARY_DARK  : "hsl(53, 100%, 25%)" ,
+     // SECONDARY_DARK  : "hsl(53, 100%, 25%)" ,
      TERTIARY_LIGHT  : "hsl(23, 100%, 66%)" ,
      TERTIARY        : "hsl(23, 100%, 50%)" ,
      TERTIARY_DARK   : "hsl(23, 100%, 25%)" ,
@@ -47,6 +47,9 @@ const PrimaryTheme = {
      } ,
      
 };
+
+
+
 
 export default PrimaryTheme;
 

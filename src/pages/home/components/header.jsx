@@ -1,30 +1,30 @@
 import React from 'react'
 import styled from "styled-components";
-import { H1_LG , LargeText , MediumSpan } from "../../../styles/global/typography";
+import { H1_lg  , MediumSpan } from "../../../styles/global/typography";
 import { $CurvyShape , $CurvyShape2 } from "../../../styles/shapes";
 import CustomButton from "../../../components/common/customButtons";
 import { motion } from "framer-motion";
-import { HeaderText } from "../../../styles/animations/animations";
+import { HeaderText  } from "../../../styles/animations/animations";
 import { useHistory } from "react-router-dom";
 
 
 function Header() {
-     const history=useHistory();
+     const history = useHistory();
      return (
-          
           <$HeaderWrapper >
                <$BoxWrapper />
                <$Box >
                     <$TextBox >
-                         <H1_LG as={motion.h1} variants = { HeaderText }>SHAHTOUR
-                              <MediumSpan as={motion.span} variants = { HeaderText }>join us in this journey</MediumSpan >
-                         </H1_LG >
-                         <CustomButton lg white as={motion.button} variants = { HeaderText }
+                         <H1_lg as = { motion.h1 } variants = { HeaderText } >SHAHTOUR
+                              <MediumSpan as = { motion.span } variants = { HeaderText } >join us in this
+                                   journey</MediumSpan >
+                         </H1_lg >
+                         <CustomButton lg white as = { motion.button } variants = { HeaderText }
                               onClick = { () => (
-                                   history.push( "/tours" ))}>See all tours</CustomButton >
+                                   history.push( "/tours" )) } >See all tours</CustomButton >
                     </$TextBox >
                     <$BGVideo >
-                         <video autoPlay muted loop >
+                         <video autoPlay muted loop poster={"/images/homePage/video-poster.png"}>
                               <source src = { "/videos/header.mp4" }
                                    type = "video/mp4" />
                               <source src = { "/videos/header.wbm" }
@@ -49,14 +49,15 @@ const $HeaderWrapper = styled.header`
      position              : relative;
      //padding-top: 1rem;
 `
+
 const $BoxWrapper = styled.div`
-     background    : ${ p => p.theme.GREY_DARK_2 };
-     grid-column   : 2/3;
-     height        : 112%;
-     grid-row      : 1/2;
-     border-top-right-radius: 3rem;
-     border-top-left-radius: 3rem;
-     box-shadow    : 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+     background              : ${ p => p.theme.GREY_DARK_2 };
+     grid-column             : 2/3;
+     height                  : 112%;
+     grid-row                : 1/2;
+     border-top-right-radius : 3rem;
+     border-top-left-radius  : 3rem;
+     box-shadow              : 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
           -4px -4px 10px 0 rgba(0, 0, 0, 0.1);
      @media only screen and (max-width : 50em) {
           grid-column   : 1/-1;
@@ -65,16 +66,16 @@ const $BoxWrapper = styled.div`
 `
 
 const $Box = styled.div`
-     grid-row      : 1/2;
-     grid-column   : 2/3;
-     position      : relative;
-     background-image : linear-gradient(to bottom, ${ p => p.theme.PRIMARY }, ${ p => p.theme.PRIMARY_DARK });
-     height        : 112%;
-     display       : grid;
-     border-top-left-radius: 3rem;
-     border-top-right-radius: 3rem;
-     
-     overflow      : hidden;
+     grid-row                : 1/2;
+     grid-column             : 2/3;
+     position                : relative;
+     background-image        : linear-gradient(to bottom, ${ p => p.theme.PRIMARY }, ${ p => p.theme.PRIMARY_DARK });
+     height                  : 112%;
+     display                 : grid;
+     border-top-left-radius  : 3rem;
+     border-top-right-radius : 3rem;
+
+     overflow                : hidden;
      @media only screen and (max-width : 50em) {
           grid-column   : 1/-1;
           border-radius : 0;

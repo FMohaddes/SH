@@ -28,7 +28,7 @@ function Signup( { onclick } ) {
                <$Form >
                     <FormInput
                          Ref = { inputElement }
-                         name = ''
+                         name = 'username'
                          Icon={<Name/>}
                          hasIcon
                          type = 'text'
@@ -37,7 +37,7 @@ function Signup( { onclick } ) {
      
                     />
                     <FormInput
-                         name = ''
+                         name = 'name'
                          Icon={<Mail/>}
                          hasIcon
                          type = 'email'
@@ -46,7 +46,7 @@ function Signup( { onclick } ) {
                     
                     />
                     <FormInput
-                         name = ''
+                         name = 'password'
                          Icon={<Key/>}
                          hasIcon
                          type = 'password'

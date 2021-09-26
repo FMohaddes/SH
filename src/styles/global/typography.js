@@ -4,7 +4,7 @@ const ff = css`
      font-family : 'Playfair Display', serif;
 `
 
-export const H1_LG = styled.h1`
+export const H1_lg = styled.h1`
      font-weight : 900;
      font-size   : 9rem;
      ${ ff }
@@ -18,7 +18,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
      font-weight : bold;
-     font-size   : 40px;
+     font-size   : 4rem;
      ${ ff }
 
 `

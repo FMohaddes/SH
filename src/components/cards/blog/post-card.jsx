@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Caption , H3 , H4 , LargeText , SmallText } from "../../../styles/global/typography";
 import { Link } from "react-router-dom";
 import { ReactComponent as Calendar } from "../../../assets/icons/calendar.svg";
-import { ReactComponent as Star } from "../../../assets/icons/star.svg";
+
 
 function PostCard( { title , image , tag , date , comment , context } ) {
      
@@ -24,7 +24,7 @@ function PostCard( { title , image , tag , date , comment , context } ) {
                          </$Date >
                          <$User >
                               { comment.slice( 0 , 4 ).map( ( { image , id } ) =>
-                                   <img key = { id } src = { image } alt = { "Dsf" } />
+                                   <img key = { id } src = { image } alt = { title } />
                               )
                               }
                          </$User >
@@ -39,7 +39,7 @@ export default PostCard;
 
 
 const $PostCardGrid = styled.div`
-     height                : 25rem;
+     height                : 27rem;
      display               : grid;
      grid-template-columns : 1fr 1fr;
      overflow              : hidden;
@@ -50,7 +50,7 @@ const $PostCardGrid = styled.div`
      img {
           grid-column : 1/2;
           width       : 100%;
-          height      : 25rem;
+          height      : 27rem;
           object-fit  : cover;
 
           }
@@ -115,7 +115,6 @@ const $Calendar = styled( Calendar )`
 `
 const $User = styled.div`
      display : flex;
-
      img {
           box-sizing    : content-box;
           width         : 2.5rem;

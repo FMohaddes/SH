@@ -3,11 +3,13 @@ import styled from "styled-components";
 import { H2 , H4 , MediumText } from "../../../styles/global/typography";
 import EggShape from '../../../assets/graphics/egg-shape.svg'
 import { Link } from "react-router-dom";
+import Wave from "../../../components/wave-svg";
 
 
 function About() {
      return (
           <$AboutGrid >
+               {/*<Wave/>*/}
                <$H2 >About Us</$H2 >
                <$AboutImg src = { "/images/homePage/about.png" } />
                <$MediumText >

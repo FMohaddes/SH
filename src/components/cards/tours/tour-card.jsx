@@ -45,8 +45,8 @@ function TourCard( { title , image , capacity , hotel , rating , days , price } 
                     
                     <$Rating >
                          { state.map( ( { fill , id } ) => {
-                              return fill === true ?
-                                   <$Star key = { id } fill /> :
+                              return fill ?
+                                   <$Star key = { id } fill={"true"} /> :
                                    <$Star key = { id } />
                          } )
                          }

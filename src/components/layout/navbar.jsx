@@ -1,34 +1,22 @@
 import React , { useContext , useEffect , useState } from 'react'
 import styled , { ThemeContext } from "styled-components";
-import { Toggle } from "../dev/toggle";
-import { Link as ReactRouterDomLink , useLocation } from 'react-router-dom';
-import { motion } from "framer-motion";
-import { PageAnimation } from "../../styles/animations/animations";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as User } from "../../assets/icons/user.svg";
 import { ReactComponent as Search } from "../../assets/icons/search.svg";
-import { ReactComponent as Sun } from "../../assets/icons/sun.svg";
 
 import AccountPopup from "../user/account-popup";
+import { logDOM } from "@testing-library/react";
+import { NavLink , useLocation } from "react-router-dom";
 
-const Link = ( { isActive , children , ...props } ) => {
-     return (
-          <ReactRouterDomLink { ...props }>
-               { children }
-          </ReactRouterDomLink >
-     );
-};
 
 function Navbar() {
-     const { id , setTheme } = useContext( ThemeContext );
+     const { id , setCurrent } = useContext( ThemeContext );
      const { pathname } = useLocation();
      const [ isOpen , setIsOpen ] = useState( false )
      
      function handleClick( event ) {
           setIsOpen( !isOpen )
      }
-     
-     
      function handleClickOutside() {
           setIsOpen( false )
      }
@@ -40,34 +28,34 @@ function Navbar() {
      //           document.removeEventListener( "mousedown" , handleClickOutside )
      //      }
      // } , [] )
-     
+     const menuItems = [ "HOME" , "TOURS" , "BLOG" , "CONTACT" ]
      return (
-          <motion.div variants = { PageAnimation } initial = "hidden" animate = "show" >
                
-               <$NavbarGrid >
+               <$NavbarGrid role="navigation">
                     <Logo />
                     <$Menu >
-                         <$Link to = "/" isActive = { pathname === '/' } >
-                              Home
-                         </$Link >
-                         <$Link to = "/tours" isActive = { pathname === '/tours' } >
-                              TOURS
-                         </$Link >
-                         <$Link to = "/hotels" isActive = { pathname === '/hotels' } >
-                              BLOG
-                         </$Link >
-                         <$Link to = "/contact" isActive = { pathname === '/contact' } >
-                              CONTACT
-                         </$Link >
+                         {
+                              menuItems.map( ( item , i ) => {
+                                        return i === 0 ?
+                                             (<$NavLink exact key={i} to = { `/` } activeClassName="selected" >
+                                                  { item }
+                                             </$NavLink >) :
+                                             (<$NavLink key={i} to = { `/${ item }` }
+                                                  activeClassName="selected" >
+                                                  { item }
+                                             </$NavLink >)
+                                   }
+                              )
+                         }
+                         
                          <$IconWrapper >
                               <$Search />
                               <$User onClick = { ( e ) => handleClick( e ) } />
-                              {/*<Toggle isActive = { id === 'dark' } onToggle = { setTheme } />*/ }
+                             {/*<Toggle isActive = { id === 'dark' } onToggle = { setCurrent } />*/}
                          </$IconWrapper >
                          <AccountPopup isOpen = { isOpen } />
                     </$Menu >
                </$NavbarGrid >
-          </motion.div >
      );
 }
 
@@ -106,41 +94,38 @@ const $Menu = styled.div`
      grid-auto-flow  : column;
      align-items     : center;
      padding         : 1rem 0 0;
-     
 `
 
-const $Link = styled( Link )`
+const $NavLink = styled( NavLink )`
      font-size      : 1.8rem;
-     font-weight    : ${ p => p.isActive ? '800' : '400' };
-     color          : ${ p => p.isActive ? `${ p.theme.WHITE }` : `${ p.theme.GREY }` };
+     font-weight    :  400;
+     color          : ${p => p.theme.GREY };
      text-transform : uppercase;
+     &.selected{
+          font-size      : 1.8rem;
+          font-weight    : 600;
+          color          : ${p=> p.theme.WHITE };
+          text-transform : uppercase;
+          }
 `
 const $IconWrapper = styled.div`
-     cursor  : pointer;
-     display : grid;
-     grid-auto-flow: column;
-     justify-items: start;
-     align-items: start;
+     cursor         : pointer;
+     display        : grid;
+     grid-auto-flow : column;
+     margin-top: -.8rem;
 `
 
 const $User = styled( User )`
      width  : 4rem;
-     height : 3rem;
+     height : 2.5rem;
      fill   : ${ p => p.theme.GREY_LIGHT };
      cursor : pointer;
 `
 const $Search = styled( Search )`
      width  : 4rem;
-     height : 2.6rem;
+     height : 2.3rem;
+     align-self: end;
      fill   : ${ p => p.theme.GREY_LIGHT };
      cursor : pointer;
 `
-
-const $Sun = styled( Sun )`
-     width  : 4rem;
-     height : 2.6rem;
-     fill   : ${ p => p.theme.GREY_LIGHT };
-     cursor : pointer;
-`
-
 

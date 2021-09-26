@@ -16,7 +16,7 @@ function LatestPosts() {
                <$PostsWrapper >
                     {
                          state.posts.slice( 0 , 4 ).map( ( { id , ...otherprops } ) =>
-                              <PostCard key = { id } { ...otherprops } /> )
+                              <PostCard key = { id.toString() } { ...otherprops } /> )
                     }
                </$PostsWrapper >
           </$LatestPostsWrapper >
@@ -34,9 +34,9 @@ const $LatestPostsWrapper = styled.section`
 
 const $H2 = styled( H2 )`
      display                 : inline-block;
-     background              : ${ p => `linear-gradient(to right bottom,
-     ${ p.theme.GREY_DARK_2 },
-     ${ p.theme.GREY })` };
+     background              : linear-gradient(to right bottom,
+     ${p => p.theme.GREY_DARK_2 },
+     ${p => p.theme.GREY }) ;
      -webkit-background-clip : text;
      color                   : transparent;
      font-size: 5rem;
