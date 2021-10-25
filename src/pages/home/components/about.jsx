@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components";
 import { H2 , H4 , MediumText } from "../../../styles/global/typography";
-import EggShape from '../../../assets/graphics/egg-shape.svg'
+import EggShape from "../../../assets/graphics/egg-shape.svg"
 import { Link } from "react-router-dom";
 import Wave from "../../../components/wave-svg";
 
@@ -9,7 +9,7 @@ import Wave from "../../../components/wave-svg";
 function About() {
      return (
           <$AboutGrid >
-               {/*<Wave/>*/}
+               {/*<Wave/>*/ }
                <$H2 >About Us</$H2 >
                <$AboutImg src = { "/images/homePage/about.png" } />
                <$MediumText >
@@ -35,7 +35,7 @@ function About() {
                     sit vitae.
                
                </$MediumText >
-               <$ReadMore to={"/"}>Read more &rarr;</$ReadMore>
+               <$ReadMore to = { "/" } >Read more &rarr;</$ReadMore >
           </$AboutGrid >
      );
 }
@@ -46,8 +46,8 @@ const $AboutGrid = styled.section`
      grid-column : 2/3;
      height      : 70vh;
      position    : relative;
-     margin-top: 5rem;
-     
+     margin-top  : 5rem;
+
 `
 
 const $H2 = styled( H2 )`
@@ -57,7 +57,7 @@ const $H2 = styled( H2 )`
      ${ p.theme.GREY })` };
      -webkit-background-clip : text;
      color                   : transparent;
-     font-size: 5rem;
+     font-size               : 5rem;
 
 `
 

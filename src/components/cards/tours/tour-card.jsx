@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components";
 import { H3 } from "../../../styles/global/typography";
-import { ReactComponent as Money } from "../../../assets/icons/paper_money.svg";
 import { ReactComponent as Star } from "../../../assets/icons/star.svg";
 import { Link } from "react-router-dom";
 
 function TourCard( { title , image , capacity , hotel , rating , days , price } ) {
-     const [ state , setState ] = React.useState([])
+     const [ state , setState ] = React.useState( [] )
      const stars = []
      const tourStar = () => {
           for ( let i = 1 ; i <= 5 ; i++ ) {
@@ -18,7 +17,7 @@ function TourCard( { title , image , capacity , hotel , rating , days , price } 
           return stars
      }
      React.useEffect( () => {
-          setState(tourStar )
+          setState( tourStar )
      } , [] );
      
      
@@ -39,17 +38,14 @@ function TourCard( { title , image , capacity , hotel , rating , days , price } 
                     <span >
                          { days } days
                     </span >
-                
+               
                </$TextBox >
                <$More >
                     
                     <$Rating >
-                         { state.map( ( { fill , id } ) => {
-                              return fill ?
-                                   <$Star key = { id } fill={"true"} /> :
-                                   <$Star key = { id } />
-                         } )
-                         }
+                         { state.map( ( { fill , id } ) =>
+                              <$Star key = { id } fill = { fill ? "true" : null } />
+                         ) }
                     </$Rating >
                     <$ReadMore to = { "/" } >Read more &rarr;</$ReadMore >
                
@@ -64,20 +60,18 @@ export default TourCard;
 const $TourCard = styled.div`
      width         : 35rem;
      height        : 35rem;
-     border-radius: 2rem;
+     border-radius : 2rem;
      overflow      : hidden;
      display       : grid;
      box-shadow    : 0 .5rem .5rem rgba(0, 0, 0, 0.25),
      0 .5rem .5rem 0.5px rgba(255, 255, 255, 0.2);
      margin        : 2rem 3rem;
 
-
-
 `
 const $Img = styled.div`
      grid-column         : 1/-1;
      grid-row            : 1/2;
-     background          : ${ ( { src } ) => `url(${ src })` };
+     background-image          : ${ ( { src } ) => `url(${ src })` };
      background-size     : cover;
      background-position : 20% 50%;
      width               : 85%;
@@ -116,9 +110,9 @@ const $TextBox = styled.div`
           font-size : 1.5rem;
 
           :nth-child(1) {
-               font-size : 3.5rem;
-               font-family  : 'Raleway', sans-serif;
-               font-weight: 800;
+               font-size   : 3.5rem;
+               font-family : 'Raleway', sans-serif;
+               font-weight : 800;
                }
           }
 `

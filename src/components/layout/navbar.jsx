@@ -1,4 +1,4 @@
-import React , { useContext , useEffect , useState } from 'react'
+import React , { useContext , useEffect , useState } from "react"
 import styled , { ThemeContext } from "styled-components";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as User } from "../../assets/icons/user.svg";
@@ -11,12 +11,13 @@ import { NavLink , useLocation } from "react-router-dom";
 
 function Navbar() {
      const { id , setCurrent } = useContext( ThemeContext );
-     const { pathname } = useLocation();
+    
      const [ isOpen , setIsOpen ] = useState( false )
      
      function handleClick( event ) {
           setIsOpen( !isOpen )
      }
+     
      function handleClickOutside() {
           setIsOpen( false )
      }
@@ -30,32 +31,26 @@ function Navbar() {
      // } , [] )
      const menuItems = [ "HOME" , "TOURS" , "BLOG" , "CONTACT" ]
      return (
-               
-               <$NavbarGrid role="navigation">
-                    <Logo />
-                    <$Menu >
-                         {
-                              menuItems.map( ( item , i ) => {
-                                        return i === 0 ?
-                                             (<$NavLink exact key={i} to = { `/` } activeClassName="selected" >
-                                                  { item }
-                                             </$NavLink >) :
-                                             (<$NavLink key={i} to = { `/${ item }` }
-                                                  activeClassName="selected" >
-                                                  { item }
-                                             </$NavLink >)
-                                   }
-                              )
-                         }
-                         
-                         <$IconWrapper >
-                              <$Search />
-                              <$User onClick = { ( e ) => handleClick( e ) } />
-                             {/*<Toggle isActive = { id === 'dark' } onToggle = { setCurrent } />*/}
-                         </$IconWrapper >
-                         <AccountPopup isOpen = { isOpen } />
-                    </$Menu >
-               </$NavbarGrid >
+          
+          <$NavbarGrid role = "navigation" >
+               <Logo />
+               <$Menu >
+                    {
+                         menuItems.map( ( item , i ) =>
+                              <$NavLink exact key = { item } to = { i === 0 ? "/" : `/${ item }` }
+                                   activeClassName = "selected" >
+                                   { item }</$NavLink >
+                         )
+                    }
+                    
+                    <$IconWrapper >
+                         <$Search />
+                         <$User onClick = { ( e ) => handleClick( e ) } />
+                         {/*<Toggle isActive = { id === 'dark' } onToggle = { setCurrent } />*/ }
+                    </$IconWrapper >
+                    <AccountPopup isOpen = { isOpen } />
+               </$Menu >
+          </$NavbarGrid >
      );
 }
 
@@ -98,13 +93,14 @@ const $Menu = styled.div`
 
 const $NavLink = styled( NavLink )`
      font-size      : 1.8rem;
-     font-weight    :  400;
-     color          : ${p => p.theme.GREY };
+     font-weight    : 400;
+     color          : ${ p => p.theme.GREY };
      text-transform : uppercase;
-     &.selected{
+
+     &.selected {
           font-size      : 1.8rem;
           font-weight    : 600;
-          color          : ${p=> p.theme.WHITE };
+          color          : ${ p => p.theme.WHITE };
           text-transform : uppercase;
           }
 `
@@ -112,7 +108,7 @@ const $IconWrapper = styled.div`
      cursor         : pointer;
      display        : grid;
      grid-auto-flow : column;
-     margin-top: -.8rem;
+     margin-top     : -.8rem;
 `
 
 const $User = styled( User )`
@@ -122,10 +118,10 @@ const $User = styled( User )`
      cursor : pointer;
 `
 const $Search = styled( Search )`
-     width  : 4rem;
-     height : 2.3rem;
-     align-self: end;
-     fill   : ${ p => p.theme.GREY_LIGHT };
-     cursor : pointer;
+     width      : 4rem;
+     height     : 2.3rem;
+     align-self : end;
+     fill       : ${ p => p.theme.GREY_LIGHT };
+     cursor     : pointer;
 `
 

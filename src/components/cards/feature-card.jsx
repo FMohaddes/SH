@@ -8,7 +8,6 @@ function FeatureCard( { title , icon , text } ) {
           <$CardGrid >
                { icon }
                <$H4 >{ title }</$H4 >
-               
                <SmallText >
                     { text }
                </SmallText >

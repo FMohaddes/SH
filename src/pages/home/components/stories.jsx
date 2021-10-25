@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components";
 import Slideshow from "../../../components/HOC/slideshow/slideshow";
 import StoryCard from "../../../components/cards/story/story-card";
@@ -11,20 +11,18 @@ function Stories() {
      const [ state , setState ] = React.useState( {
           users : [] ,
      } )
-     React.useEffect( () => {
-          const fetchFunc = async () => {
-               const res = await fetch( 'https://randomuser.me/api/?results=6' )
+     React.useEffect( async () => {
+               const res = await fetch( "https://randomuser.me/api/?results=6" )
                const resJson = await res.json();
                setState( { ...state , users : resJson } )
-          }
-          fetchFunc();
+  
      } , [] );
      return (
           <$StoriesWrapper >
                {
                     state.users.results ?
                          <StoryCarousel items = { state.users.results } SlidesNumber = { 1 }
-                              single dots={true} />
+                              single dots = { true } />
                          : []
                }
           
@@ -43,5 +41,5 @@ const $StoriesWrapper = styled.section`
      background-attachment : fixed;
      padding               : 9rem 6rem;
      display               : grid;
-     
+
 `

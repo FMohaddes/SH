@@ -15,19 +15,21 @@ function Header() {
                <$BoxWrapper />
                <$Box >
                     <$TextBox >
-                         <H1_lg as = { motion.h1 } variants = { HeaderText } >SHAHTOUR
-                              <MediumSpan as = { motion.span } variants = { HeaderText } >join us in this
-                                   journey</MediumSpan >
+                         <H1_lg as = { motion.h1 } variants = { HeaderText } >
+                              SHAHTOUR
+                              <MediumSpan as = { motion.span } variants = { HeaderText } >
+                                   join us in this journey
+                              </MediumSpan >
                          </H1_lg >
                          <CustomButton lg white as = { motion.button } variants = { HeaderText }
                               onClick = { () => (
                                    history.push( "/tours" )) } >See all tours</CustomButton >
                     </$TextBox >
                     <$BGVideo >
-                         <video autoPlay muted loop poster={"/images/homePage/video-poster.png"}>
+                         <video autoPlay muted loop poster={"/images/homePage/video-poster.webp"}>
                               <source src = { "/videos/header.mp4" }
                                    type = "video/mp4" />
-                              <source src = { "/videos/header.wbm" }
+                              <source src = { "/videos/header.webm" }
                                    type = "video/webm" />
                          </video >
                     </$BGVideo >
@@ -74,7 +76,6 @@ const $Box = styled.div`
      display                 : grid;
      border-top-left-radius  : 3rem;
      border-top-right-radius : 3rem;
-
      overflow                : hidden;
      @media only screen and (max-width : 50em) {
           grid-column   : 1/-1;

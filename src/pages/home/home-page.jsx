@@ -3,19 +3,16 @@ import styled from "styled-components";
 import Header from "./components/header";
 import { PageAnimation } from "../../styles/animations/animations";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import About from "./components/about";
 import Features from "./components/features";
 import LatestToursSlider from "../../containers/tours/latestToursSlider/latest-tours.slider";
 import LatestPosts from "../../containers/blog/latestTours/latest-posts";
 import Stories from "./components/stories";
 import TourGuide from "./components/tour-guide";
-import Navbar from "../../components/layout/navbar";
 
 function HomePage() {
      return (
                <$HomePageGrid variants = { PageAnimation } initial = "hidden" animate = "show">
-                    
                     <Header />
                     <About/>
                     <Features/>

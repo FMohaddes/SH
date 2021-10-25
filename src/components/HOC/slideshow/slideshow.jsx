@@ -58,6 +58,8 @@ export const $StyledSlider = styled.div`
           display : grid;
           justify-content: center;
           align-content: center;
+          user-select: text;
+
           .slick-list {
                display        : grid;
                grid-auto-flow : column;

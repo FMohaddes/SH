@@ -8,7 +8,6 @@ import DarkTheme from "./styles/themes/secondary-theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/global/global";
 import { AnimatePresence } from "framer-motion";
-import ScrollToTop from "./components/dev/scroll-to-top";
 import Footer from "./components/layout/footer";
 
 const HomePage = lazy( () => import("./pages/home/home-page") )

@@ -1,7 +1,7 @@
 import React , { useEffect , useRef , useState } from 'react'
 import FormInput from "../common/form/form-input";
 import styled from "styled-components";
-import { H2 , H3 , H4 , LargeText , SmallText } from "../../styles/global/typography";
+import {  LargeText , SmallText } from "../../styles/global/typography";
 import CustomButton from "../common/customButtons";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
@@ -23,7 +23,7 @@ function Signup( { onclick } ) {
      return (
           < >
                <$LargeText >Welcome </$LargeText >
-               <$SmallText >Already have an account? <a onClick = { onclick } >
+               <$SmallText >Already have an account ? <a onClick = { onclick } >
                     Login</a ></$SmallText >
                <$Form >
                     <FormInput

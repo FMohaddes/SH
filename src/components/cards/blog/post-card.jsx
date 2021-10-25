@@ -1,6 +1,6 @@
-import React , { useState } from 'react'
+import React , { useState } from "react"
 import styled from "styled-components";
-import { Caption , H3 , H4 , LargeText , SmallText } from "../../../styles/global/typography";
+import { Caption , H4 , SmallText } from "../../../styles/global/typography";
 import { Link } from "react-router-dom";
 import { ReactComponent as Calendar } from "../../../assets/icons/calendar.svg";
 
@@ -23,8 +23,8 @@ function PostCard( { title , image , tag , date , comment , context } ) {
                               <p >{ date }</p >
                          </$Date >
                          <$User >
-                              { comment.slice( 0 , 4 ).map( ( { image , id } ) =>
-                                   <img key = { id } src = { image } alt = { title } />
+                              { comment.slice( 0 , 4 ).map( ( { image } , i ) =>
+                                   <img key = { i.toString() } src = { image } alt = { title } />
                               )
                               }
                          </$User >
@@ -46,7 +46,8 @@ const $PostCardGrid = styled.div`
      background            : ${ p => p.theme.GREY_LIGHT };
      text-align            : left;
      align-items           : start;
-      background:white;
+     background            : white;
+
      img {
           grid-column : 1/2;
           width       : 100%;
@@ -62,9 +63,9 @@ const $TextBox = styled.div`
      grid-gap : 1.5rem;
 
      h4 {
-          color     : ${ p => p.theme.GREY };
-          font-size : 1.5rem;
-          font-style:italic;
+          color      : ${ p => p.theme.GREY };
+          font-size  : 1.5rem;
+          font-style : italic;
           }
 
      > * {
@@ -115,12 +116,13 @@ const $Calendar = styled( Calendar )`
 `
 const $User = styled.div`
      display : flex;
+
      img {
           box-sizing    : content-box;
           width         : 2.5rem;
           height        : 2.5rem;
           border-radius : 50%;
-          border        : 3px solid #FFF;
+          border        : .3rem solid #FFF;
 
           &:not(:last-child) {
                margin-right : -1.5rem;

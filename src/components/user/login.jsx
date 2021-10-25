@@ -84,7 +84,6 @@ const $LargeText = styled( LargeText )`
 `
 const $CustomButton = styled( CustomButton )`
      width : 14rem;
-
 `
 const $CustomButtonSignIN = styled( $CustomButton )`
      color : ${ p => p.theme.GREY_DARK_2 };
