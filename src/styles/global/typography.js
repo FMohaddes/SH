@@ -8,6 +8,11 @@ export const H1_lg = styled.h1`
      font-weight : 900;
      font-size   : 9rem;
      ${ ff }
+     @media only screen and (max-width : 50em) {
+     font-size   : 7rem;
+
+     }
+     
 `
 
 export const H1 = styled.h1`
@@ -81,5 +86,9 @@ export const MediumSpan = styled.span`
      font-size   : 1rem;
      font-family : 'Raleway', sans-serif;
      line-height : 130%;
+     @media only screen and (max-width : 50em) {
+          font-size   : .8rem;
+
+          }
 `
 

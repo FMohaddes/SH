@@ -50,6 +50,10 @@ const $HeaderWrapper = styled.header`
      grid-template-columns :minmax(3rem, 8rem) 1fr minmax(3rem, 8rem);
      position              : relative;
      //padding-top: 1rem;
+     @media only screen and (max-width : 45em) {
+          height                : 50vh;
+
+          }
 `
 
 const $BoxWrapper = styled.div`

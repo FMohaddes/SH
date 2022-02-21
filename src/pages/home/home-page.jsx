@@ -35,4 +35,8 @@ export const $HomePageGrid = styled(motion.div)`
      grid-column-gap       : 1rem;
      overflow              : hidden;
      position              : relative;
+     @media only screen and (max-width : 50em) {
+          grid-row-gap          : 11rem;
+
+          }
 `

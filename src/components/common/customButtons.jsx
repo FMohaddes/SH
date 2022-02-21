@@ -24,6 +24,12 @@ const $ButtonStyles = styled.button`
      justify-content : center;
      align-items     : center;
      border: none;
+     
+     @media only screen and (max-width : 50em) {
+          font-size   :2rem;
+
+          }
+     
      border:.1rem solid ${p => p.tertiaryBorder ? `${ p.theme.TERTIARY_DARK }`
           :"none"};
      background      : ${ p => p.white ?
